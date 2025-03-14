@@ -1,26 +1,67 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --text-primary: #1a1a1a;
+    --text-secondary: #666666;
+    --text-tertiary: #999999;
+    --text-link: #0066cc;
+    --text-code: #1a1a1a;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f5f5f5;
+    --bg-code: #f8f8f8;
+    --border-color: #e5e5e5;
+  }
+
+  .dark {
+    --text-primary: #ffffff;
+    --text-secondary: #a3a3a3;
+    --text-tertiary: #737373;
+    --text-link: #60a5fa;
+    --text-code: #ffffff;
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #262626;
+    --bg-code: #1e1e1e;
+    --border-color: #404040;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .prose {
+    @apply max-w-none;
+  }
+  
+  .prose p {
+    @apply text-[var(--text-primary)];
+  }
+
+  .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+    @apply text-[var(--text-primary)];
+  }
+
+  .prose a {
+    @apply text-[var(--text-link)] no-underline hover:underline;
+  }
+
+  .prose code {
+    @apply text-[var(--text-code)] bg-[var(--bg-code)] px-1.5 py-0.5 rounded;
+  }
+
+  .prose pre {
+    @apply bg-[var(--bg-code)] border border-[var(--border-color)];
+  }
+
+  .prose pre code {
+    @apply bg-transparent px-3 py-3;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-[var(--border-color)] text-[var(--text-secondary)];
+  }
+
+  .prose ul, .prose ol {
+    @apply text-[var(--text-primary)];
+  }
 }
