@@ -67,7 +67,7 @@ const PostContent = ({ code }: PostContentProps) => {
 
   return (
     <article className="prose prose-lg prose-invert max-w-none [&_pre]:!bg-[#0d1117]">
-      <MDXContent components={components} />
+      <MDXContent components={components as any} />
     </article>
   );
 };

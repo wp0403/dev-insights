@@ -5,7 +5,7 @@ import { compareDesc } from 'date-fns'
 import Link from 'next/link'
 import { useState, useMemo } from 'react'
 import SearchBar from '@/components/SearchBar'
-import TagFilter from '@/app/components/TagFilter'
+import TagFilter from '@/components/TagFilter'
 import Hero from '@/components/Hero'
 import PostStatsDisplay from '@/components/PostStatsDisplay'
 

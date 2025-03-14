@@ -1,7 +1,7 @@
 {
   "posts": {
     "markdown-guide": {
-      "views": 12,
+      "views": 17,
       "likes": 2
     },
     "hello-world": {
@@ -9,7 +9,7 @@
       "likes": 1
     },
     "typescript-tips": {
-      "views": 16,
+      "views": 18,
       "likes": 0
     }
   }

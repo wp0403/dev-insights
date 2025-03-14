@@ -20,7 +20,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
   }
 
   return (
-    <div className="min-h-screen bg-[var(--bg-primary)]">
+    <div className="min-h-screen bg-[var(--bg-primary)] pb-12">
       <Header />
       <div className="bg-gradient-to-b from-[#1a1b26] to-[#24283b] h-[30vh] pt-16 relative z-0">
         <div className="container mx-auto px-4">
@@ -34,7 +34,6 @@ export default async function PostPage({ params }: { params: { slug: string } })
           </div>
         </div>
       </div>
-
       <div className="container mx-auto px-4 -mt-20 relative z-10">
         <div className="max-w-3xl mx-auto">
           <article className="bg-[var(--bg-primary)] rounded-lg shadow-xl p-8">
